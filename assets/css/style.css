@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*je met tout mes element de mon html a 0 en margin et padding */
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shlop', arial;
+    background-color: black;
+    color: red;
+}
+
+img {
+    height: 150px;
+}
+
+#title {
+    margin: 30px;
+    text-align: center;
+    font-family: 'Creepsville', arial;
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.cell:nth-child(3n) {
+    /*Je selectionne le 3eme enfant de chaque ligne*/
+    border-right: none;
+}
+
+.cell:nth-child(6)~.cell {
+    /*Je selectionne tout les enfant a partir de 6*/
+    border-bottom: none;
+}
+
+.board {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem;
+}
+
+.white {
+    color: white;
+}
+
+#endGame {
+    display: none;
+    width: 100%;
+    padding: 2%;
+    background-color: black;
+}
+
+#endGame p{
+    /*Pour le p et l'input de mon id endGame je fait ce qui est ecrit ci-dessous*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    font-size: 40px;
+    margin: 40px;
+}
+#Titre {
+    max-height: 50px;
+    margin-top: 10px;
+}
+#reloadGame{
+    height: 50px;
+    width: 100px;
+    margin: 40px;
+}
+
+#gameStatus {
+    margin: 20px;
+    font-size: 50px;
+}
